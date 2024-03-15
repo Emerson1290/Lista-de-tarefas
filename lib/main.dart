@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:task_list/pages/task_form.dart';
+import 'package:task_list/pages/task_form_page.dart';
 import 'package:task_list/pages/task_list_page.dart';
 import 'package:task_list/providers/task_list.dart';
 import 'package:task_list/routes/app_routes.dart';
@@ -23,7 +23,6 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           routes: {
             AppRoutes.home: (_) => const TaskListPage(),
-            AppRoutes.adicionarTarefa: (_) => const TaskForm(),
           }),
     );
   }

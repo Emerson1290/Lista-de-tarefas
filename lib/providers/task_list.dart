@@ -10,6 +10,12 @@ class TaskList extends ChangeNotifier {
 
   int get itemCount => tasks.length;
 
+  List<Task> get completedTasks =>
+      [..._tasks.where((i) => i.isCompleted).toList()];
+
+  List<Task> get pendingTasks =>
+      [..._tasks.where((i) => !i.isCompleted).toList()];
+
   void addTask(String descricao) {
     _tasks.add(Task(
       id: Random().nextDouble().toString(),
